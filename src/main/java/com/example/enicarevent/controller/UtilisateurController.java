@@ -32,7 +32,6 @@ public class UtilisateurController {
     @GetMapping("/{email}")
     public Utilisateur getutlisateurbyEmail(@PathVariable String email) {
         Utilisateur utilisateur = utilisateurSerice.getutlisateurbyEmail(email);
-
         return utilisateur;
     }
 

@@ -15,18 +15,27 @@ public class Utilisateur {
     private String email;
     private String Motdepasse;
     private String role;
+    private String nomclub;
 
+    public String getNomclub() {
+        return nomclub;
+    }
+
+    public void setNomClub(String nomclub) {
+        this.nomclub = nomclub;
+    }
 
     public Utilisateur() {
     }
 
-    public Utilisateur(String nom, String prenom, String classe, String email, String motdepasse, String role) {
+    public Utilisateur(String nom, String prenom, String classe, String email, String motdepasse, String role ,String nomClub) {
         this.nom = nom;
         Prenom = prenom;
         Classe = classe;
         this.email = email;
         Motdepasse = motdepasse;
         this.role = role;
+        this.nomclub=nomClub;
     }
 
     public String getMotdepasse() {
@@ -89,12 +98,13 @@ public class Utilisateur {
     public String toString() {
         return "Utilisateur{" +
                 "id=" + id +
-                ", Nom='" + nom + '\'' +
+                ", nom='" + nom + '\'' +
                 ", Prenom='" + Prenom + '\'' +
                 ", Classe='" + Classe + '\'' +
-                ", Email='" + email + '\'' +
+                ", email='" + email + '\'' +
                 ", Motdepasse='" + Motdepasse + '\'' +
                 ", role='" + role + '\'' +
+                ", nomClub='" + nomclub + '\'' +
                 '}';
     }
 }

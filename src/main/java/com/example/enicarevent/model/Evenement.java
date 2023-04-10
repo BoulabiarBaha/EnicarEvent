@@ -1,9 +1,8 @@
 package com.example.enicarevent.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Evenement {
@@ -15,16 +14,27 @@ public class Evenement {
     private String date;
     private int nbrPlace;
     private String pathImage;
+    private String nomclub;
+
+
+    public String getnomclub() {
+        return nomclub;
+    }
+
+    public void setnnomclub(String nomclub) {
+        this.nomclub= nomclub;
+    }
 
     public Evenement() {
     }
 
-    public Evenement(String titre, String description, String date, int nbrPlace, String pathImage) {
+    public Evenement(String titre, String description, String date, int nbrPlace, String pathImage,String nomClubE) {
         this.titre = titre;
         this.description = description;
         this.date = date;
         this.nbrPlace = nbrPlace;
         this.pathImage = pathImage;
+        this.nomclub=nomClubE;
     }
 
     public int getId() {
@@ -84,6 +94,7 @@ public class Evenement {
                 ", date='" + date + '\'' +
                 ", nbrPlace=" + nbrPlace +
                 ", pathImage='" + pathImage + '\'' +
+                ", nomclub='" + nomclub + '\'' +
                 '}';
     }
 }
