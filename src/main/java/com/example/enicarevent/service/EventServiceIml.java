@@ -23,4 +23,16 @@ public class EventServiceIml implements EventService{
     public List<Evenement> getEvents() {
         return eventrepository.findAll();
     }
+
+    @Override
+    public String deleteEvent(int id) {
+        eventrepository.deleteById(id);
+        return "ok";
+    }
+
+    @Override
+    public Evenement getEventById(int id) {
+        return eventrepository.findById(id).orElseThrow();
+    }
+
 }

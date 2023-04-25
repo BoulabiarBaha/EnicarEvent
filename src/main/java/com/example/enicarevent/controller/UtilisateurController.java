@@ -35,6 +35,17 @@ public class UtilisateurController {
         return utilisateur;
     }
 
+    @PostMapping("/{email}/{password}")
+    public String updatePassword(@PathVariable String email,@PathVariable String password) {
+        utilisateurSerice.updatemotdepasse(email, password);
+        return "utlisateur a jour";
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String supprimerUtlisateur (@PathVariable int id)
+    {
+        return utilisateurSerice.supprimer(id);
+    }
 
 
 

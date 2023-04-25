@@ -14,27 +14,17 @@ public class Evenement {
     private String date;
     private int nbrPlace;
     private String pathImage;
-    private String nomclub;
+    private String nomClub;
 
 
-    public String getnomclub() {
-        return nomclub;
-    }
-
-    public void setnnomclub(String nomclub) {
-        this.nomclub= nomclub;
-    }
-
-    public Evenement() {
-    }
-
-    public Evenement(String titre, String description, String date, int nbrPlace, String pathImage,String nomClubE) {
+    public Evenement(int id, String titre, String description, String date, int nbrPlace, String pathImage, String nomClub) {
+        this.id = id;
         this.titre = titre;
         this.description = description;
         this.date = date;
         this.nbrPlace = nbrPlace;
         this.pathImage = pathImage;
-        this.nomclub=nomClubE;
+        this.nomClub = nomClub;
     }
 
     public int getId() {
@@ -82,7 +72,18 @@ public class Evenement {
     }
 
     public void setPathImage(String pathImage) {
-            this.pathImage = pathImage;
+        this.pathImage = pathImage;
+    }
+
+    public String getNomClub() {
+        return nomClub;
+    }
+
+    public void setNomClub(String nomClub) {
+        this.nomClub = nomClub;
+    }
+
+    public Evenement() {
     }
 
     @Override
@@ -94,7 +95,7 @@ public class Evenement {
                 ", date='" + date + '\'' +
                 ", nbrPlace=" + nbrPlace +
                 ", pathImage='" + pathImage + '\'' +
-                ", nomclub='" + nomclub + '\'' +
+                ", nomClub='" + nomClub + '\'' +
                 '}';
     }
 }

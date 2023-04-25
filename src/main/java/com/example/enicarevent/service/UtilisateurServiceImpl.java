@@ -30,5 +30,19 @@ public class UtilisateurServiceImpl implements UtilisateurSerice {
         return utilisateurRepository.getUtilisateurByemail(email);
     }
 
+    @Override
+    public void updatemotdepasse(String email, String newpassword) {
+        Utilisateur user =utilisateurRepository.getUtilisateurByemail(email);
+        user.setMotdepasse(newpassword);
+        utilisateurRepository.save(user);
+
+    }
+
+    @Override
+    public String supprimer(int id) {
+        utilisateurRepository.deleteById(id);
+        return "ok";
+    }
+
 
 }

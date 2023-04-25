@@ -12,5 +12,7 @@ public interface EventService {
 
     public Evenement saveEvenement(Evenement evenement);
     public List<Evenement> getEvents();
+    public String deleteEvent(int id);
 
+    public Evenement getEventById(int id);
 }

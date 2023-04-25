@@ -9,6 +9,9 @@ public interface UtilisateurSerice {
     public Utilisateur saveUtilisateur(Utilisateur utilisateur);
     public List<Utilisateur> getUtilisateurs();
     public  Utilisateur getutlisateurbyEmail(String email);
+    public void updatemotdepasse(String email,String newpassword);
+    public String supprimer (int id);
+
 
 
 
